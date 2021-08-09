@@ -12,6 +12,10 @@ class Football
   def draw
     @score += 1
   end
+
+  def lose
+  end
+
 end
 
 RSpec.describe Football do
@@ -31,5 +35,10 @@ RSpec.describe Football do
     5.times { football.win }
     10.times { football.draw }
     expect(football.score).to eq(25)
+  end
+
+  it "has a lose method" do
+    football = Football.new
+    expect(football).to respond_to(:lose)
   end
 end
