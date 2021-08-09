@@ -35,3 +35,5 @@ RSpec.describe Garage do
     expect(subject.storage.first).to eq(car)
   end
 end
+
+# When we use allow we can test after the fact / business logic went as expected.
